@@ -65,49 +65,19 @@
 		</video>
 		<h1>Borderlands1 Loot Hunt 2019</h1>
 		<p>
-
-<script>
-var end = new Date('03/01/2019 10:1 AM');
-
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    var timer;
-
-    function showRemaining() {
-        var now = new Date();
-        var distance = end - now;
-        if (distance < 0) {
-
-            clearInterval(timer);
-            document.getElementById('countdown').innerHTML = 'EXPIRED!';
-
-            return;
-        }
-        var days = Math.floor(distance / _day);
-        var hours = Math.floor((distance % _day) / _hour);
-        var minutes = Math.floor((distance % _hour) / _minute);
-        var seconds = Math.floor((distance % _minute) / _second);
-
-        document.getElementById('countdown').innerHTML = days + 'days ';
-        document.getElementById('countdown').innerHTML += hours + 'hrs ';
-        document.getElementById('countdown').innerHTML += minutes + 'mins ';
-        document.getElementById('countdown').innerHTML += seconds + 'secs';
-    }
-
-    timer = setInterval(showRemaining, 1000);
+<div class="clock-builder-output"></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="clock_assets/jquery.countdown.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var d = new Date();
+	d.setTime(1551466800*1000); // from: 03/01/2019 01:00 pm -0600
+	$('.clock-builder-output').countdown(d, function(event) {
+		$(this).html(event.strftime('%D days %H:%M:%S'));
+	});
+});
 </script>
-<div {
-id="countdown";
-     position: relative;
-     font-size: 1.5rem;
-     margin: 0;
-     font-family: 'Montserrat';
-     color: #FFF;
-     text-align: center;
-     }</div>
+		</p>
 
-    </p>
 	</body>
 </html>
