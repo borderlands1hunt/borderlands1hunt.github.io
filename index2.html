@@ -41,15 +41,6 @@
 			text-align: center;
 		}
 
-		countdown {
-			position: relative;
-			font-size: 1.5rem;
-			margin: 0;
-			font-family: 'Montserrat';
-			color: #FFF;
-			text-align: center;
-		}
-
 		#bg {
 			position: fixed;
 			right: 0;
@@ -65,18 +56,56 @@
 		</video>
 		<h1>Borderlands1 Loot Hunt 2019</h1>
 		<p>
-<div class="clock-builder-output"></div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="clock_assets/jquery.countdown.min.js"></script>
-<script type="text/javascript">
-$(function(){
-	var d = new Date();
-	d.setTime(1551466800*1000); // from: 03/01/2019 01:00 pm -0600
-	$('.clock-builder-output').countdown(d, function(event) {
-		$(this).html(event.strftime('%D days %H:%M:%S'));
-	});
-});
+
+<form name="count">
+<input type="text" size="69" name="count2">
+</form>
+
+
+<script>
+
+/*
+Count down until any date script-
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free scripts here!
+*/
+
+
+//change the text below to reflect your own,
+var before="Christmas!"
+var current="Today is Christmas. Merry Christmas!"
+var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+
+function countdown(yr,m,d){
+theyear=yr;themonth=m;theday=d
+var today=new Date()
+var todayy=today.getYear()
+if (todayy < 1000)
+todayy+=1900
+var todaym=today.getMonth()
+var todayd=today.getDate()
+var todayh=today.getHours()
+var todaymin=today.getMinutes()
+var todaysec=today.getSeconds()
+var todaystring=montharray[todaym]+" "+todayd+", "+todayy+" "+todayh+":"+todaymin+":"+todaysec
+futurestring=montharray[m-1]+" "+d+", "+yr
+dd=Date.parse(futurestring)-Date.parse(todaystring)
+dday=Math.floor(dd/(60*60*1000*24)*1)
+dhour=Math.floor((dd%(60*60*1000*24))/(60*60*1000)*1)
+dmin=Math.floor(((dd%(60*60*1000*24))%(60*60*1000))/(60*1000)*1)
+dsec=Math.floor((((dd%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1)
+if(dday==0&&dhour==0&&dmin==0&&dsec==1){
+document.forms.count.count2.value=current
+return
+}
+else
+document.forms.count.count2.value="Only "+dday+ " days, "+dhour+" hours, "+dmin+" minutes, and "+dsec+" seconds left until "+before
+setTimeout("countdown(theyear,themonth,theday)",1000)
+}
+//enter the count down date using the format year/month/day
+countdown(2002,12,25)
 </script>
+
 		</p>
 
 	</body>
