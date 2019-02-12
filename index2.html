@@ -1,0 +1,78 @@
+!doctype html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Borderlands1 Loot Hunt 2019</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+	<style>
+		body {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 0;
+			background-color: #000;
+		}
+
+		h1 {
+			position: relative;
+			margin: 0;
+			color: #FFF;
+			font-size: 4rem;
+			font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+			line-height: 1;
+			letter-spacing: -0.01562em;
+			margin-bottom: 2rem;
+			text-align: center;
+			text-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+		}
+
+		p {
+			position: relative;
+			font-size: 1.5rem;
+			margin: 0;
+			font-family: 'Montserrat';
+			color: #FFF;
+			text-align: center;
+		}
+
+		#bg {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+		}
+	</style>
+	</head>
+	<body>
+		<video playsinline autoplay loop muted id="bg">
+		  <source src="http://borderlands1hunt.github.io/bg.mp4" type="video/mp4">
+		</video>
+		<h1>Borderlands1 Loot Hunt 2019</h1>
+		<p>
+<script> 
+var deadline = new Date("Mar 1, 2019 12:00:00").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("demo").innerHTML = days + "d "  
++ hours + "h " + minutes + "m " + seconds + "s "; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("demo").innerHTML = "EXPIRED"; 
+    } 
+}, 1000); 
+</script> 
+    </p>
+	</body>
+</html>
