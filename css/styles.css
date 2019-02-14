@@ -77,3 +77,28 @@ t{
 	background-image: rgba (255, 255, 255, 0.4);
 	
 }
+
+p2 {
+	position: absolute;
+	font-size: 1.4rem;
+	color: #AAA;
+	bottom:1%;
+	left:43%;
+}
+
+#counter{
+	position: absolute;
+	bottom: 60%;
+	left: 43%;
+}
+
+#halfthepage{
+	position: absolute;
+	height:60%;
+	bottom:0%;
+	width:100%;
+}
+
+#credits{
+	text-align: center;
+}
