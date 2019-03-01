@@ -40,6 +40,23 @@
 	
 }
 
+a
+{
+    text-decoration: none; 
+    decoration: none; 
+}
+
+a:hover, a:focus, a:active {
+  color: #000;
+}
+
+
+a:visited 
+{
+    text-decoration: none; 
+    decoration: none; 
+}
+
 p1 {
 	position: relative;
 	font-size: 3rem;
@@ -90,7 +107,6 @@ t{
 }
 
 p2 {
-	position: absolute;
 	font-size: 1.4rem;
 	color: #FFF;
 	bottom:1%;
@@ -114,3 +130,19 @@ p2 {
 #credits{
 	text-align: center;
 }
+
+.btn{
+
+	background: linear-gradient(rgba(255,0,0,0)5px, rgba(255,255,255,.1));
+	width:35%;
+	height:60px;
+	z-index:1;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.btn:hover{
+	background-color:#FFD21D;	color:#000;
+	z-index:2;
+}
+
